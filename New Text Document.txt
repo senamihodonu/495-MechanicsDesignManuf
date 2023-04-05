@@ -1,0 +1,3 @@
+3.9 Describe why different crystal structures exhibit different strengths and ductilities.
+
+Ductility of the material is directly proportional to the number of the slip systems. Along with it, plastic behaviour of the material can be estimated with the help of number of active slip systems. As an example, a hcp material has few grains oriented in reference to a slip system and thus to start plastic deformation high stresses are required because of having few slip systems and are brittle whereas because of having many slip systems a fcc material requires lower stresses for the same and thus have moderate strength and good ductility.
