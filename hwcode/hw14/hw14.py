@@ -1,3 +1,6 @@
+#!/usr/bin/python
+import sqlite3
+from sqlite3 import Error
 import pandas as pd 
 from tabulate import tabulate
 """
@@ -72,16 +75,33 @@ print("Prob 9.1" + answer)
 the shapes of parts ground, types of machines involved, typical maximum and minimum workpiece dimensions, 
 and production rates
 """
-print("Prob 9.100")
-dict = {'Process': ['Surface grinding', 'Cylindrical grinding', 'Internal grinding','Centerless grinding'],
-'Characteristics': [
-    'This process involves the grinding of flat surfaces', """In cylindrical grinding, also called center-type grinding, 
-                                                              the external cylindrical surfaces and shoulders of the 
-                                                              workpiece are ground, such as crankshaft bearings, spindles, 
-                                                              pins, bearing rings, and rolls for rolling mills.""", 'Internal grinding','Centerless grinding'],
-'Type of machines': ['Surface grinder, vertical spindles, rotary tables', 'Cylindrical grinding', 'Internal grinding','Centerless grinding'],
-'Dimension of piece': [' The surface grinder can cut steel in pieces \nno bigger than 18” long by 6” high by 8” wide.', 'Cylindrical grinding', 'Internal grinding','Centerless grinding']
+def create_connection(db_file):
+   """ create a database connection to a SQLite database """
+   conn = None
+   try:
+      conn = sqlite3.connect(db_file)
+      print("sqlite version: " + sqlite3.version)
+      print("Opened database successfully")
+   except Error as e:
+      print(e)
+   finally:
+      if conn:
+         conn.close()
 
-}
-df = pd.DataFrame(dict)
-print(tabulate(df, headers = 'keys', tablefmt = 'psql'))
+create_connection('hw14.db')   
+
+
+
+# print("Prob 9.100")
+# dict = {'Process': ['Surface grinding', 'Cylindrical grinding', 'Internal grinding','Centerless grinding'],
+# 'Characteristics': [
+#     'This process involves the grinding of flat surfaces', """In cylindrical grinding, also called center-type grinding, 
+#                                                               the external cylindrical surfaces and shoulders of the 
+#                                                               workpiece are ground, such as crankshaft bearings, spindles, 
+#                                                               pins, bearing rings, and rolls for rolling mills.""", 'Internal grinding','Centerless grinding'],
+# 'Type of machines': ['Surface grinder, vertical spindles, rotary tables', 'Cylindrical grinding', 'Internal grinding','Centerless grinding'],
+# 'Dimension of piece': [' The surface grinder can cut steel in pieces \nno bigger than 18” long by 6” high by 8” wide.', 'Cylindrical grinding', 'Internal grinding','Centerless grinding']
+
+# }
+# df = pd.DataFrame(dict)
+# print(tabulate(df, headers = 'keys', tablefmt = 'psql'))
