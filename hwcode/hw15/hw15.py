@@ -3,7 +3,7 @@ from matplotlib import image as mpimg
 from PIL import Image
 import pandas as pd 
 from tabulate import tabulate
-
+################################################################################
 # 10.3
 problem = """
 10.3 What properties are influenced by the degree of polymerization?"""
@@ -16,25 +16,27 @@ print(answer)
 
 # 10.11
 problem = """
-10.11 Discuss the significance of the glass-transition temperature, Tg , in engineering 
-applications."""
+10.11 Discuss the significance of the glass-transition temperature, Tg , in 
+engineering applications."""
 print(problem)
 answer = """
-The glass transition temperature, Tg, is the temperature at which amorphous polymers transition from
-being hard, brittle and glassy to being softer, more flexible and rubbery, and the mechanical properties
-are change significantly.
+The glass transition temperature, Tg, is the temperature at which amorphous 
+polymers transition from being hard, brittle and glassy to being softer, more 
+flexible and rubbery, and the mechanical propertiesare change significantly.
 
-Because the mechanical properties are changed significantly as this temperature, engineering applications
-can be developed to exploit this property. For example, at below the Tg, amorphous polymers, are more hard,
-rigid and brittle, this property can be used to develop polymer parts that require these properties and are
-only exposed to low temperatures.
+Because the mechanical properties are changed significantly as this temperature,
+engineering applicationscan be developed to exploit this property. For example, 
+at below the Tg, amorphous polymers, are more hard,rigid and brittle, this
+property can be used to develop polymer parts that require these properties and 
+are only exposed to low temperatures.
 
-This temperature also affects properties like the workability of the polymer, dimensional stability the 
-material and a few other. These are properties that can be exploited for different suitable engineering
-applications
+This temperature also affects properties like the workability of the polymer, 
+dimensional stability the material and a few other. These are properties that 
+can be exploited for different suitable engineering applications
 """
 print(answer)
 
+################################################################################
 # Prob 10.27
 # image = mpimg.imread("figure10.8.png")
 # plt.imshow(image)
@@ -65,6 +67,7 @@ insulations for wires and cables as wires and cables usually have to turn over
 tight corners and are not usually load bearing. 
 """
 print(answer)
+################################################################################
 
 # Prob 10.58
 problem = """
@@ -98,6 +101,7 @@ Wear resistance - Compared to metals, polymer gears may need to be replaced more
 often.
 """
 print(answer)
+################################################################################
 
 # Prob 10.87
 image = Image.open('figure10.9.png')
@@ -131,6 +135,7 @@ The area under the curve, toughness, increases as the temperature increases unti
 around 50 degree celsius and where the area, toughness, starts to degrees.
 """
 print(observation)
+################################################################################
 
 # Prob 10.88
 image = Image.open('figure10.9.png')
@@ -142,11 +147,11 @@ make a plot of the modulus of elasticity versus temperature.
 """
 print(problem)
 
-curve_neg_25 = 9/3
-curve_0 = 8/3
-curve_25 = 6/3
-curve_50 = 2.5/1
-curve_65 = 2.25/1
+curve_neg_25 = 5.2/1
+curve_0 = 4/1
+curve_25 = 3/1
+curve_50 = 2.3/1
+curve_65 = 2/1
 curve_80 = 1.75/1
 
 dict = {'temperature': [-25, 0, 25, 50, 65, 80],
