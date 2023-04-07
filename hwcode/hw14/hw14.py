@@ -27,7 +27,11 @@ Do = LDR * Dp
 # print("the largest permissible blank diameter is "+ str(Do) + "mm")
 
 # b) the deepest cup that can be deep drawn; 
-# LDR < Do/Dp
+# Assuming constant volume
+# volume of blank = volume of cup
+hmax = ((Do**2)*t)/(Dp**2)
+print('the deepest cup that can be deep drawn is ' + str(hmax) + " mm")
+
 # normal anisotropy for aluminum-killed steel, r̄: 1.4 - 1.8
 Dp = Do/LDR
 # print("the deepest cup that can be deep drawn is "+ str(Dp) + "mm")
